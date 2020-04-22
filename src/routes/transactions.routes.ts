@@ -24,7 +24,7 @@ transactionsRouter.get('/', async (request, response) => {
   });
 
   const balance = await transactionsRepository.getBalance();
-
+  console.log(balance);
   return response.json({ transactions, balance });
 });
 
